@@ -19,8 +19,8 @@ public class Main {
 		obj.setBounds(350, 50,frameWidth, frameHeight); //size of the frame
 		obj.setTitle("Developed by  Santanu Pal");	//Title of the Game frame
 		obj.setBackground(Color.DARK_GRAY);
-		obj.setResizable(false);	// Is frame Resizable or not
-		obj.setVisible(true);		//visiblity of frame
+		obj.setResizable(false);	// Is frame Re-sizable or not
+		obj.setVisible(true);		//Frame visible 
 		obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		//action on close option
 		
 		obj.add(gamePlay);
