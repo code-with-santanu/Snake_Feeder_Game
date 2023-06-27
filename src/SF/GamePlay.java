@@ -48,7 +48,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener{
 			625,650,675,700,725,750,775,800,825,850};
 	
 	private int [] fruitYpos = {75,100,125,150,175,200,225,250,275,300,325,250,375,400,425,450,475,500,525,550,575,600,
-			625, 650};
+			625};
 	
 	private ImageIcon fruitImage;
 	
@@ -84,7 +84,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener{
 		}
 		
 		//Display Title
-		titleImage = new ImageIcon("Images/title.png");
+		titleImage = new ImageIcon("res/Images/title.png");
 		titleImage.paintIcon(this, g, 25, 5);
 		
 		//Display gamePlay border
@@ -107,44 +107,44 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener{
 		g.drawString("Length:" + lengthOfSnake, 780, 50);
 		
 		//Initial position of the headRight image
-		headRight = new ImageIcon("Images/headRight.png");
+		headRight = new ImageIcon("res/Images/headRight.png");
 		headRight.paintIcon(this, g, snakeXlength[0], snakeYlength[0]);
 		
 		for(int i = 0; i < lengthOfSnake; i++)
 		{
 			if(i == 0 && right)
 			{
-				headRight = new ImageIcon("Images/headRight.png");
+				headRight = new ImageIcon("res/Images/headRight.png");
 				headRight.paintIcon(this, g, snakeXlength[i], snakeYlength[i]);
 			}
 			
 			if(i == 0 && left)
 			{
-				headLeft = new ImageIcon("Images/headLeft.png");
+				headLeft = new ImageIcon("res/Images/headLeft.png");
 				headLeft.paintIcon(this, g, snakeXlength[i], snakeYlength[i]);
 			}
 			
 			if(i == 0 && up)
 			{
-				headUp = new ImageIcon("Images/headUp.png");
+				headUp = new ImageIcon("res/Images/headUp.png");
 				headUp.paintIcon(this, g, snakeXlength[i], snakeYlength[i]);
 			}
 			
 			if(i == 0 && down)
 			{
-				headDown = new ImageIcon("Images/headDown.png");
+				headDown = new ImageIcon("res/Images/headDown.png");
 				headDown.paintIcon(this, g, snakeXlength[i], snakeYlength[i]);
 			}
 			
 			//When we are in tail position
 			if(i!=0)
 			{
-				tail = new ImageIcon("Images/tail.png");
+				tail = new ImageIcon("res/Images/tail.png");
 				tail.paintIcon(this, g, snakeXlength[i], snakeYlength[i]);
 			}
 			
 			//Fruit Image
-			fruitImage = new ImageIcon("Images/fruit.png");
+			fruitImage = new ImageIcon("res/Images/fruit.png");
 			
 			if(fruitXpos[xpos] == snakeXlength[0] && fruitYpos[ypos] == snakeYlength[0])
 			{
@@ -166,7 +166,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener{
 				left = false;
 				up = false;
 				down = false;
-				timer.stop();
+//				timer.stop();
 				
 				//Display the Game Over
 				g.setColor(Color.red);
